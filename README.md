@@ -213,8 +213,8 @@ La demo en vivo que aparece en las capturas 01 a 07 y en el video es una herrami
 ![Demo en vivo: predicciones individuales y descarga CSV](capturas/captura-06.png)
 *Captura 06. Demo en vivo: predicciones individuales y descarga CSV.*
 
-![Demo en vivo: modo "Subir CSV"](capturas/captura-07.png)
-*Captura 07. Demo en vivo: modo "Subir CSV".*
+![Demo en vivo: vista general con configuración y resultados](capturas/captura-07.png)
+*Captura 07. Demo en vivo: vista general con la configuración y los resultados de la evaluación.*
 
 ![Ejecución de pruebas con pytest](capturas/captura-08.png)
 *Captura 08. Ejecución de pruebas con pytest.*
