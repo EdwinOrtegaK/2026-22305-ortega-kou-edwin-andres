@@ -193,43 +193,40 @@ prediccion = (proba >= metadatos["umbral"]).astype(int)  # 1 = ataque, 0 = benig
 
 Las capturas están en la carpeta [`capturas/`](capturas/).
 
-La demo en vivo que aparece en las capturas 01 a 07 y en el video es una herramienta aparte, hecha con Streamlit, que carga el modelo congelado (`src/models/xgboost/xgboost_final.json`); no forma parte de este repositorio.
+La demo en vivo que aparece en las capturas 01 a 06 y en el video es una herramienta aparte, hecha con Streamlit, que carga el modelo congelado (`src/models/xgboost/xgboost_final.json`); no forma parte de este repositorio.
 
-![Demo en vivo (Streamlit): pantalla inicial](capturas/captura-01.png)
-*Captura 01. Demo en vivo (Streamlit): pantalla inicial.*
+![Demo en vivo: configuración con modelo XGBoost y umbral 0.87](capturas/captura-01.png)
+*Captura 01. Demo en vivo: configuración con modelo XGBoost y umbral 0.87.*
 
-![Demo en vivo: configuración con modelo XGBoost y umbral 0.87](capturas/captura-02.png)
-*Captura 02. Demo en vivo: configuración con modelo XGBoost y umbral 0.87.*
+![Demo en vivo: métricas de la evaluación en test](capturas/captura-02.png)
+*Captura 02. Demo en vivo: métricas de la evaluación en test.*
 
-![Demo en vivo: métricas de la evaluación en test](capturas/captura-03.png)
-*Captura 03. Demo en vivo: métricas de la evaluación en test.*
+![Demo en vivo: matriz de confusión](capturas/captura-03.png)
+*Captura 03. Demo en vivo: matriz de confusión.*
 
-![Demo en vivo: matriz de confusión](capturas/captura-04.png)
-*Captura 04. Demo en vivo: matriz de confusión.*
+![Demo en vivo: gráficas de desempeño](capturas/captura-04.png)
+*Captura 04. Demo en vivo: gráficas de desempeño.*
 
-![Demo en vivo: gráficas de desempeño](capturas/captura-05.png)
-*Captura 05. Demo en vivo: gráficas de desempeño.*
+![Demo en vivo: predicciones individuales y descarga CSV](capturas/captura-05.png)
+*Captura 05. Demo en vivo: predicciones individuales y descarga CSV.*
 
-![Demo en vivo: predicciones individuales y descarga CSV](capturas/captura-06.png)
-*Captura 06. Demo en vivo: predicciones individuales y descarga CSV.*
+![Demo en vivo: vista general con la configuración y los resultados de la evaluación](capturas/captura-06.png)
+*Captura 06. Demo en vivo: vista general con la configuración y los resultados de la evaluación.*
 
-![Demo en vivo: vista general con configuración y resultados](capturas/captura-07.png)
-*Captura 07. Demo en vivo: vista general con la configuración y los resultados de la evaluación.*
+![Ejecución de pruebas con pytest](capturas/captura-07.png)
+*Captura 07. Ejecución de pruebas con pytest.*
 
-![Ejecución de pruebas con pytest](capturas/captura-08.png)
-*Captura 08. Ejecución de pruebas con pytest.*
+![Notebook 04: selección del umbral](capturas/captura-08.png)
+*Captura 08. Notebook 04: selección del umbral.*
 
-![Notebook 04: selección del umbral](capturas/captura-09.png)
-*Captura 09. Notebook 04: selección del umbral.*
+![Notebook 07: importancia de características (gain)](capturas/captura-09.png)
+*Captura 09. Notebook 07: importancia de características (gain).*
 
-![Notebook 07: importancia de características (gain)](capturas/captura-10.png)
-*Captura 10. Notebook 07: importancia de características (gain).*
+![Notebook 08: comparación de modelos](capturas/captura-10.png)
+*Captura 10. Notebook 08: comparación de modelos.*
 
-![Notebook 08: comparación de modelos](capturas/captura-11.png)
-*Captura 11. Notebook 08: comparación de modelos.*
-
-![Notebook 09: análisis de errores](capturas/captura-12.png)
-*Captura 12. Notebook 09: análisis de errores.*
+![Notebook 09: análisis de errores](capturas/captura-11.png)
+*Captura 11. Notebook 09: análisis de errores.*
 
 ## Demo
 
