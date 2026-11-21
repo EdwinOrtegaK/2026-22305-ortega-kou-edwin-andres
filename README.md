@@ -212,7 +212,7 @@ En la barra lateral, seleccionar el modelo **XGBoost**, el origen de datos **"Ar
 
 Las capturas están en la carpeta [`capturas/`](capturas/).
 
-Las capturas 01 a 06 y el video se tomaron con la demo compartida del equipo, hecha con Streamlit. Este repositorio incluye en [`src/app_demo/`](src/app_demo/) una versión adaptada que contiene solo el módulo XGBoost.
+Las capturas 01 a 06 muestran la demo interactiva en Streamlit. Este repositorio incluye en [`src/app_demo/`](src/app_demo/) su versión adaptada, que contiene solo el módulo XGBoost.
 
 ![Demo en vivo: configuración con modelo XGBoost y umbral 0.87](capturas/captura-01.png)
 *Captura 01. Demo en vivo: configuración con modelo XGBoost y umbral 0.87.*
