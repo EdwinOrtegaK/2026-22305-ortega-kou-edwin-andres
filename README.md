@@ -49,6 +49,7 @@ Los resultados sobre el conjunto de prueba completo (66 544 flujos), los interva
 │   ├── .env.example           # No se requieren variables de entorno
 │   ├── conftest.py            # Agrega src/ al sys.path para pytest
 │   ├── requirements.txt
+│   ├── app_demo/              # Demo interactiva en Streamlit (solo XGBoost)
 │   ├── data/                  # raw/, processed/, sequences/ (no versionadas)
 │   ├── docs/                  # ADR, auditoría del baseline y guía de pruebas
 │   ├── models/xgboost/        # Modelo congelado (xgboost_final.json) y metadatos
@@ -75,7 +76,7 @@ Los resultados sobre el conjunto de prueba completo (66 544 flujos), los interva
 - **Jupyter**: notebooks del pipeline.
 - **pytest**: pruebas automatizadas.
 - **joblib**: utilidades de serialización.
-- **Streamlit**: solo en la demo en vivo de las capturas y del video; esa herramienta es aparte y no se incluye en este repositorio.
+- **Streamlit**: demo interactiva (`src/app_demo/`).
 
 ## Requisitos previos
 
@@ -119,6 +120,12 @@ El dataset **no está incluido** en el repositorio por su tamaño (varios GB).
    ```
 
    > `tensorflow` aparece en `requirements.txt` porque lo usa el módulo GRU; **no es necesario** para el módulo XGBoost y puede omitirse de la instalación.
+
+   Para la demo interactiva se necesitan además sus dependencias (incluye Streamlit):
+
+   ```bash
+   pip install -r src/app_demo/requirements.txt
+   ```
 
 4. Colocar el CSV del miércoles de CIC-IDS2017 en `src/data/raw/` (ver [Requisitos previos](#requisitos-previos)).
 
@@ -190,11 +197,22 @@ proba = booster.predict(
 prediccion = (proba >= metadatos["umbral"]).astype(int)  # 1 = ataque, 0 = benigno
 ```
 
+### d) Demo interactiva
+
+La demo en Streamlit carga el modelo congelado de `src/models/xgboost/` y los datos de prueba incluidos en `src/app_demo/Data_Test/xgboost/` (no requiere el dataset crudo):
+
+```bash
+cd src/app_demo
+streamlit run app.py
+```
+
+En la barra lateral, seleccionar el modelo **XGBoost**, el origen de datos **"Archivos locales"** y el umbral **0.87** (valor por defecto, leído de los metadatos), y presionar **"Ejecutar predicciones"**. La matriz de confusión esperada es **TN 65 282 · FP 8 · FN 11 · TP 1 153**.
+
 ## Capturas
 
 Las capturas están en la carpeta [`capturas/`](capturas/).
 
-La demo en vivo que aparece en las capturas 01 a 06 y en el video es una herramienta aparte, hecha con Streamlit, que carga el modelo congelado (`src/models/xgboost/xgboost_final.json`); no forma parte de este repositorio.
+Las capturas 01 a 06 y el video se tomaron con la demo compartida del equipo, hecha con Streamlit. Este repositorio incluye en [`src/app_demo/`](src/app_demo/) una versión adaptada que contiene solo el módulo XGBoost.
 
 ![Demo en vivo: configuración con modelo XGBoost y umbral 0.87](capturas/captura-01.png)
 *Captura 01. Demo en vivo: configuración con modelo XGBoost y umbral 0.87.*
@@ -250,6 +268,8 @@ Documentación técnica adicional en [`src/docs/`](src/docs/): decisiones de arq
 ### Créditos
 
 La limpieza base de los datos (`src/src/preprocessing/clean.py`) se desarrolló en conjunto con Esteban Zambrano Garoz (22119) y Juan Pablo Solís Albizurez (22102).
+
+La demo original en Streamlit también se desarrolló en conjunto con Esteban Zambrano Garoz (22119) y Juan Pablo Solís Albizurez (22102). `src/app_demo/` es una adaptación que conserva solo el módulo XGBoost.
 
 ## Licencia
 
