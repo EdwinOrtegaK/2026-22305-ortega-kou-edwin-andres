@@ -75,6 +75,7 @@ Los resultados sobre el conjunto de prueba completo (66 544 flujos), los interva
 - **Jupyter**: notebooks del pipeline.
 - **pytest**: pruebas automatizadas.
 - **joblib**: utilidades de serialización.
+- **Streamlit**: solo en la demo en vivo de las capturas y del video; esa herramienta es aparte y no se incluye en este repositorio.
 
 ## Requisitos previos
 
